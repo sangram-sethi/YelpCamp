@@ -35,7 +35,7 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-const secret = process.env.SECRET || 'thisshouldbeabettersecret';
+const secret = process.env.SECRET || 'thisshouldbeabettersecrets';
 
 const store = MongoStore.create({
   mongoUrl: dbUrl,
