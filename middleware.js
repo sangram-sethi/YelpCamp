@@ -60,3 +60,20 @@ module.exports.validateReview = (req,res,next) => {
       next();
     }
 }
+
+module.exports.pagination = (req, res, next) => {
+  let limit = parseInt(req.query.limit, 10) || 10; // Default limit is 10
+  let page = parseInt(req.query.page, 10) || 1; // Default page is 1
+
+  if (limit < 1) limit = 10; // Minimum limit is 10
+  if (limit > 100) limit = 100; // Maximum limit is 100
+
+  if (page < 1) page = 1; // Minimum page is 1
+
+  req.query.limit = limit;
+  req.query.page = page;
+  req.query.skip = (page - 1) * limit; // Calculate skip for pagination
+
+  next();
+};
+
