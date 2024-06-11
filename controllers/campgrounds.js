@@ -55,7 +55,14 @@ module.exports.showCampground = async (req, res) => {
   if (!campground) {
     req.flash("error", "Cannot find that campground!");
     return res.redirect("/campgrounds");
-  } else res.render("campgrounds/show", { campground });
+  }
+  let averageRating = 0;
+  if (campground.reviews.length > 0) {
+      const totalRating = campground.reviews.reduce((acc, review) => acc + review.rating, 0);
+      averageRating = totalRating / campground.reviews.length;
+  }
+        
+  res.render('campgrounds/show', { campground, averageRating });
 };
 
 module.exports.renderEditForm = async (req, res) => {

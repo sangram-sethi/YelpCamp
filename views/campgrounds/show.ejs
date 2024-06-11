@@ -32,6 +32,9 @@
                     <h5 class="card-title">
                         <%= campground.title%>
                     </h5>
+                    <div class="starability-result"  style="margin-top: 0.5rem; margin-bottom: 0.5rem;" data-rating="<%= averageRating %>">
+                        Rated: <%= averageRating %> stars
+                    </div>
                     <p class="card-text">
                         <%= campground.description%>
                     </p>
@@ -66,7 +69,7 @@
                     novalidate>
                     <div class="mb-3">
                         <fieldset class="starability-basic">
-                            <legend>First rating:</legend>
+                            <legend>Rate Us:</legend>
                             <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="0"
                                 checked aria-label="No rating." />
                             <input type="radio" id="first-rate1" name="review[rating]" value="1" />
