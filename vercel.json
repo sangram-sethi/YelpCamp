@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "yelpcamp/app.js",
+      "src": "/app.js",
       "use": "@vercel/node"
     },
     {
@@ -17,10 +17,13 @@
     },
     {
       "src": "/(.*)",
-      "dest": "yelpcamp/app.js"
+      "dest": "/app.js"
     },
     {
       "handle": "filesystem"
+    },
+    {
+      "public": true
     }
   ]
 }
