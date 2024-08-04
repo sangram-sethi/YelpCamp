@@ -15,10 +15,10 @@
     { "src": "/(.*)", "dest": "/index.js" }
   ],
   "env": {
-    "DB_URL": "@db_url",
-    "SECRET": "@secret_key",
-    "CLOUDINARY_CLOUD_NAME": "@cloudinary_cloud_name",
-    "CLOUDINARY_KEY": "@cloudinary_key",
-    "CLOUDINARY_SECRET": "@cloudinary_secret"
+    "DB_URL": "DB_URL",
+    "SECRET": "SECRET",
+    "CLOUDINARY_CLOUD_NAME": "CLOUDINARY_CLOUD_NAME",
+    "CLOUDINARY_KEY": "CLOUDINARY_KEY",
+    "CLOUDINARY_SECRET": "CLOUDINARY_SECRET"
   }
 }
