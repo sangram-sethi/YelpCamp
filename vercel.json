@@ -22,8 +22,5 @@
     {
       "handle": "filesystem"
     }
-  ],
-  "static": {
-    "public": "yelpcamp/public"
-  }
+  ]
 }
