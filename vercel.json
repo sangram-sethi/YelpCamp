@@ -13,12 +13,6 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/(.*)", "dest": "/index.js" }
-  ],
-  "env": {
-    "DB_URL": "@DB_URL",
-    "SECRET": "@SECRET",
-    "CLOUDINARY_CLOUD_NAME": "@CLOUDINARY_CLOUD_NAME",
-    "CLOUDINARY_KEY": "@CLOUDINARY_KEY",
-    "CLOUDINARY_SECRET": "@CLOUDINARY_SECRET"
-  }
+  ]
 }
+
