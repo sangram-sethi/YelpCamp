@@ -25,15 +25,5 @@
   ],
   "static": {
     "public": "yelpcamp/public"
-  },
-  "functions": {
-    "yelpcamp/app.js": {
-      "memory": 512,
-      "maxDuration": 10
-    },
-    "api/index.js": {
-      "memory": 512,
-      "maxDuration": 10
-    }
   }
 }
