@@ -1,6 +1,7 @@
 if(process.env.NODE_ENV !== "production") {
   require('dotenv').config();
 }
+const serverless = require('serverless-http');
 
 const express = require('express');
 const app = express();
@@ -146,4 +147,4 @@ app.listen(port, () => {
     console.log(`Listening to port ${port}`);
 });
 
-module.exports = app;
+module.exports.handler = serverless(app);
